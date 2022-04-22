@@ -16,7 +16,7 @@ public class Question3
     num = in.nextDouble();
     
     Double square = num*num;
-    System.out.println("Square of " + num + "is: " + squarea);
+    System.out.println("Square of " + num + "is: " + square);
     
    
                     
