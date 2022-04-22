@@ -18,7 +18,7 @@ public class Question2
     System.out.print("Input weight in kg: ");
     double weight = in.nextDouble();
     
-    double BMI = weight / (height * height);
+    double BMI = (100*100*weight)/(height*height);
     System.out.print("Body Mass Index is " + BMI + "\n");
     
   }
