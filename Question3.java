@@ -9,8 +9,17 @@ public class Question3
      * 
      * Hint: in.nextInt() to read integer
      */
-     
+    Double num;
     Scanner in = new Scanner(System.in);
     
+    System.out.print("Enter a number: ");
+    num = in.nextDouble();
+    
+    Double square = num*num;
+    System.out.println("Square of " + num + "is: " + squarea);
+    
+   
+                    
+     
   }
 }
