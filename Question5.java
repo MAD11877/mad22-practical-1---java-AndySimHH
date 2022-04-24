@@ -1,61 +1,78 @@
 import java.util.Scanner;
-class Question5
+
+public class Question5
 {
-   public static void main(String args[]) 
-    { 
-	
-	Scanner sc=new Scanner(System.in);
-	
-	int n=sc.nextInt(),c;
-	int [] a=new int[n];
-	int [] b=new int[n];
-	
-	double sum=0;
-	for(int i=0;i<n;i++) 
-	{
-		a[i]=sc.nextInt();
-		
-	}
-	modeCal(n,a,b);
-   }
-	
-static void modeCal(int n,int a[],int b[])
-   {
-	int m=0,c;	
-	for(int i=0;i<n;i++) 
-	{   c=1;
-          if(a[i]==-1)
-           b[i]=0;
-           else
-           {
-             for(int j=i+1;j<n;j++) 
-	     {
-		if(a[i]==a[j])
-                  {
-                      c++;
-                      a[j]=-1;
-                  }
-                   
-		
-	      }
-             b[i]=c;
-            }           
-           if(i>=1)
-	   {
-		if(i==1)
-		  m=b[0];
-	       if(b[i]>=m)
-                  m=b[i];   		 
-	    }		
-	}     
-        System.out.println(); 
-	 for(int i=0;i<n;i++) 
-	{
-	    if(b[i]==m)
-              System.out.println(a[i]);   
-		
-	}     	        
-   }
- 
-  
+  public static void main(String[] args)
+  {
+    /
+     * Prompt the user for number. This input indicates the number of integers the user will be entering next. 
+     * Print out the mode (highest occurrence) from the set of integers. 
+     *    e.g.
+     *     > 5
+     *     > 2
+     *     > 4
+     *     > 1
+     *     > 3
+     *     > 4
+     *     4
+     * 
+     *    e.g.
+     *     > 4
+     *     > 2
+     *     > 2
+     *     > 3
+     *     > 3
+     *     2
+     * Hint: Use a loop to get input. Use another 2 loops to find the mode
+     */
+
+    Scanner in = new Scanner(System.in);
+
+    /prompting input & setting variable/
+    int num = in.nextInt();
+    int[] b = new int[num];
+    int i = 0;
+
+    /while loop is used to cpature all the inputs/
+    while (i < num){
+
+      int tempnum = in.nextInt();
+
+      b[i] = tempnum;
+
+      i += 1;
+    }
+
+    int maxint = 0;
+    int maxoccurrence = 0;
+
+    /looking for integer with the max. occurrence/
+    for (int k = 0; k < b.length; k++){
+
+      int tempnum = b[k];
+      int tempoccurrence = 0;
+
+      /doing comparesion/
+      for (int l = 0; l < b.length; l++){
+
+        if (tempnum == b[l]){
+
+          tempoccurrence += 1;
+
+        }
+      }
+
+       /doing overwritting/
+      if (maxoccurrence < tempoccurrence){
+
+        maxoccurrence = tempoccurrence;
+        maxint = b[k];
+
+      }
+    }
+
+    /displaying**/
+    System.out.println(maxint);
+
+  }
 }
