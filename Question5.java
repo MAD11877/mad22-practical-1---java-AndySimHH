@@ -4,7 +4,7 @@ public class Question5
 {
   public static void main(String[] args)
   {
-    /
+    /**
      * Prompt the user for number. This input indicates the number of integers the user will be entering next. 
      * Print out the mode (highest occurrence) from the set of integers. 
      *    e.g.
@@ -28,12 +28,12 @@ public class Question5
 
     Scanner in = new Scanner(System.in);
 
-    /prompting input & setting variable/
+    /**prompting input & setting variable**/
     int num = in.nextInt();
     int[] b = new int[num];
     int i = 0;
 
-    /while loop is used to cpature all the inputs/
+    /**while loop is used to cpature all the inputs**/
     while (i < num){
 
       int tempnum = in.nextInt();
@@ -46,13 +46,13 @@ public class Question5
     int maxint = 0;
     int maxoccurrence = 0;
 
-    /looking for integer with the max. occurrence/
+    /**looking for integer with the max. occurrence**/
     for (int k = 0; k < b.length; k++){
 
       int tempnum = b[k];
       int tempoccurrence = 0;
 
-      /doing comparesion/
+      /**doing comparesion**/
       for (int l = 0; l < b.length; l++){
 
         if (tempnum == b[l]){
@@ -62,7 +62,7 @@ public class Question5
         }
       }
 
-       /doing overwritting/
+       /**doing overwritting**/
       if (maxoccurrence < tempoccurrence){
 
         maxoccurrence = tempoccurrence;
@@ -71,7 +71,7 @@ public class Question5
       }
     }
 
-    /displaying**/
+    /**displaying**/
     System.out.println(maxint);
 
   }
