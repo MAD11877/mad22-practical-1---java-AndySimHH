@@ -12,7 +12,7 @@ public class Question3
     Double num;
     Scanner in = new Scanner(System.in);
     
-    System.out.print("Enter a number: ");
+   
     num = in.nextDouble();
     
     Double square = num*num;
