@@ -4,24 +4,24 @@ public class Question2
 {
   public static void main(String[] args)
   {
-    /
+    /**
      * Prompts user for height and weight, calculate and print out the BMI of the user
      * 
      * Hint: in.nextDouble() to read double
      */
 
-    /scanner is a class in java. util package used for obtaining the input of 
-    the primitive types like int, double, etc. and strings./
+    /**scanner is a class in java. util package used for obtaining the input of 
+    the primitive types like int, double, etc. and strings.**/
     Scanner in = new Scanner(System.in);
 
-    /prompting input & setting variable/
+    /**prompting input & setting variable**/
     double height = in.nextDouble();
     double weight = in.nextDouble();
 
-    /calculation/
+    /**calculation**/
     double bmi = weight/(heightheight);
 
-    /displaying BMI/
+    /**displaying BMI**/
     System.out.println(bmi);
 
   }
