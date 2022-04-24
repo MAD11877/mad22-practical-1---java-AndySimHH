@@ -9,17 +9,13 @@ public class Question3
      * 
      * Hint: in.nextInt() to read integer
      */
-    Double num;
+
     Scanner in = new Scanner(System.in);
-    
-   
-    num = in.nextDouble();
-    
-    Double square = num*num;
-    System.out.println(num + square);
-    
-   
-                    
-     
+    int i = in.nextInt();
+
+    i = i i;
+
+    System.out.println(i);
+
   }
 }
