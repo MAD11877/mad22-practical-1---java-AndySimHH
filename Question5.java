@@ -48,7 +48,7 @@ static void modeCal(int n,int a[],int b[])
                   m=b[i];   		 
 	    }		
 	}     
-        System.out.println("mode:"); 
+        System.out.println(); 
 	 for(int i=0;i<n;i++) 
 	{
 	    if(b[i]==m)
